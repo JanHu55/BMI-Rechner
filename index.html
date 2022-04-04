@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-Rechner</title>
+</head>
+
+<body>
+    <header>
+        <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Rechner</h3>
+        <p>Mit diesem Tool kannst du deinen BMI ausrechnen lassen und eine Auswertung darüber erhalten.</p>
+        <p>Der BMI (Body Mass Index), gibt grob den Körperfettanteil deines Körpers an.</p>
+    </header>
+    <main>
+        <div>
+            <h3>Geschlecht</h3>
+            <input type="radio" name="geschlecht" value="Männlicht" /><label>Männlich</label>
+            <input type="radio" name="geschlecht" value="Weiblich" /><label>Weiblich</label>
+        </div>
+        <div>
+            <p>Alter</p><input type="text"/> 
+        </div>
+        <div>
+            <p>Höhe in cm</p><input type="text">
+            <p>Gewicht in kg</p><input type="text">
+            <br>
+            <br>
+        </div>
+        <div>
+            <form action="result.html">
+                <input type="submit" value="Start"/>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3>Weitere Informationen</h3>
+        <p>Wenn du mehr Informationen über den BMI und dessen Aussagekraft erfahren willst, besuch gerne folgende Website:
+            <br>
+            <a href="https://www.gesundheitsinformation.de/was-sagt-der-body-mass-index-ueber-die-gesundheit-aus.html" target="_blank">Was sagt der Body-Mass-Index über die Gesundheit aus?</a>
+        </p>
+    </footer>
+</body>
+</html>
