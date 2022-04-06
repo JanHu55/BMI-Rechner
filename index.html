@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI-Rechner</title>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
 </head>
 
 <body>
@@ -15,19 +16,18 @@
         <p>Der BMI (Body Mass Index), gibt grob den Körperfettanteil deines Körpers an.</p>
     </header>
     <main>
-        <div>
-            <h3>Geschlecht</h3>
-            <input type="radio" name="geschlecht" value="Männlicht" /><label>Männlich</label>
-            <input type="radio" name="geschlecht" value="Weiblich" /><label>Weiblich</label>
+        <div class="row-one">
+            <p>
+                <input type="text"/> Alter
+                <input type="radio" name="geschlecht" value="Männlicht" /><label>Männlich</label>
+                <input type="radio" name="geschlecht" value="Weiblich" /><label>Weiblich</label>
+            </p>
         </div>
-        <div>
-            <p>Alter</p><input type="text"/> 
-        </div>
-        <div>
-            <p>Höhe in cm</p><input type="text">
-            <p>Gewicht in kg</p><input type="text">
-            <br>
-            <br>
+        <div class="row-two">
+            <p>
+                <input type="text"> Größe (cm)
+                <input type="text"> Gewicht (kg)
+            </p>
         </div>
         <div>
             <form action="result.html">
