@@ -7,42 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI-Rechner</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-
-
 </head>
 
 <body>
     <header>
         <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Rechner</h3>
-        <p>Mit diesem Tool kannst du deinen BMI ausrechnen lassen und eine Auswertung darüber erhalten.</p>
-        <p>Der BMI (Body Mass Index), gibt grob den Körperfettanteil deines Körpers an.</p>
+        <div class="intro">
+            <ul>
+                <p class="intro-text">Mit diesem Tool kannst du deinen BMI ausrechnen lassen und eine Auswertung darüber erhalten.</p>
+            </ul>
+            <ul>
+                <p class="intro-text">Der BMI (Body Mass Index), gibt grob den Körperfettanteil deines Körpers an.</p>
+            </ul> 
+        </div>
     </header>
     <main>
-        <div class="row-one">
-            <p>
-                <input type="text"/> Alter
-                <input type="radio" name="geschlecht" value="Männlicht" /><label>Männlich</label>
-                <input type="radio" name="geschlecht" value="Weiblich" /><label>Weiblich</label>
-            </p>
+        <div class="input-box">
+            <div class="row-one">
+                <p>
+                    <input type="text" class="text-input" id="age"/> Alter
+                    <label class= "container">
+                        <input type="radio" class="text" name="geschlecht" value="Männlicht" /><label>Männlich</label>
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class= "container">
+                        <input type="radio" class="text" name="geschlecht" value="Weiblich" /><label>Weiblich</label>
+                        <span class="checkmark"></span>
+                    </label>
+                </p>
+            </div>
+            <div class="row-two">
+                <p>
+                    <input type="text" class="text-input"> Größe (cm)
+                    <input type="text" class="text-input"> Gewicht (kg)
+                </p>
+            </div>
         </div>
-        <div class="row-two">
-            <p>
-                <input type="text"> Größe (cm)
-                <input type="text"> Gewicht (kg)
-            </p>
-        </div>
-        <div>
-            <form action="result.html">
-                <input type="submit" value="Start"/>
-            </form>
-        </div>
+        <form action="result.html">
+            <input type="submit" id="submit" value="Start"/>
+        </form>
     </main>
     <footer>
-        <h3>Weitere Informationen</h3>
-        <p>Wenn du mehr Informationen über den BMI und dessen Aussagekraft erfahren willst, besuch gerne folgende Website:
-            <br>
-            <a href="https://www.gesundheitsinformation.de/was-sagt-der-body-mass-index-ueber-die-gesundheit-aus.html" target="_blank">Was sagt der Body-Mass-Index über die Gesundheit aus?</a>
-        </p>
+        <h4>Weitere Informationen</h4>
+        <p>Wenn du mehr Informationen über den BMI und dessen Aussagekraft erfahren willst, besuch gerne folgende Website:</p>
+        <a href="https://www.gesundheitsinformation.de/was-sagt-der-body-mass-index-ueber-die-gesundheit-aus.html" target="_blank">Was sagt der Body-Mass-Index über die Gesundheit aus?</a>
     </footer>
 </body>
 </html>

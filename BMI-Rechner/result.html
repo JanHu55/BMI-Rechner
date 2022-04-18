@@ -7,19 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Jan Huss" content="BMI-Rechner">
     <title>BMI Resultat</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
 </head>
 <body>
-    <header><h3>Resultat und Auswertung Deines BMI</h3></header>
+    <header><h3>Resultat Deines <b>BMI</b></h3></header>
     <main>
-        <div>
-            <b>Dein BMI:</b>
+        <div id="result-box">
+            <p class="result-heading">Dein BMI</p>
         </div>
-        <div>
-            <table>
+        <div class="BMI-tabel">
+            <table id="result-tabel">
                 <thead>
-                    <tr>
-                        <td><b>BMI</b></td>
-                        <td><b>Gewichtsstatus</b> </td>  
+                    <tr id="tabel-head">
+                        <td id="top-left"><b>BMI</b></td>
+                        <td id="top-right"><b>Gewichtsstatus</b> </td>  
                     </tr>
                 </thead>
                 <tbody>
@@ -44,19 +45,20 @@
                         <td>Adipositas Grad 2</td>
                     </tr>
                     <tr>
-                        <td>über 40</td>
-                        <td>Adipositas Grad 3</td>
+                        <td id="bottom-left">über 40</td>
+                        <td id="bottom-right">Adipositas Grad 3</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <form action="index.html">
+            <input type="submit" id="submit" value="Neu"/>
+        </form>
     </main>
     <footer>
-        <h3>Weitere Informationen</h3>
-        <p>Wenn du mehr Informationen über den BMI und dessen Aussagekraft erfahren willst, besuch gerne folgende Website:
-            <br>
-            <a href="https://www.gesundheitsinformation.de/was-sagt-der-body-mass-index-ueber-die-gesundheit-aus.html" target="_blank">Was sagt der Body-Mass-Index über die Gesundheit aus?</a>
-        </p>
+        <h4>Weitere Informationen</h4>
+        <p>Wenn du mehr Informationen über den BMI und dessen Aussagekraft erfahren willst, besuch gerne folgende Website:</p>
+        <a href="https://www.gesundheitsinformation.de/was-sagt-der-body-mass-index-ueber-die-gesundheit-aus.html" target="_blank">Was sagt der Body-Mass-Index über die Gesundheit aus?</a>
     </footer>
 </body>
 </html>
