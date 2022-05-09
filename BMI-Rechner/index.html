@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI-Rechner</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-    <script src="scrips/script.js"></script>
+    <script src="scrips/script.js" defer></script>
 </head>
 
 <body>
@@ -15,39 +15,45 @@
         <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Rechner</h3>
         <div class="intro">
             <ul>
-                <p class="intro-text">Mit diesem Tool kannst du deinen BMI ausrechnen lassen und eine Auswertung darüber erhalten.</p>
+                <li class="intro-text">Mit diesem Tool kannst du deinen BMI ausrechnen lassen und eine Auswertung darüber erhalten.</li>
             </ul>
             <ul>
-                <p class="intro-text">Der BMI (Body Mass Index), gibt grob den Körperfettanteil deines Körpers an.</p>
+                <li class="intro-text">Der BMI (Body Mass Index), gibt grob den Körperfettanteil deines Körpers an.</li>
             </ul> 
         </div>
     </header>
     <main>
+        <div class="output">
+            <p id = bmi></p>
+            <p id = weightClass></p>
+        </div>
         <div class="input-box">
             <div class="row-one">
                 <p>
                     <input type="text" class="text-input" id="age"/> Alter
                     <label class= "container">
-                        <input type="radio" class="text" name="geschlecht" value="Männlicht" /><label>Männlich</label>
+                        <input type="radio" name="geschlecht" id="male" value="Männlicht" /><label>Männlich</label>
                         <span class="checkmark"></span>
                     </label>
                     
                     <label class= "container">
-                        <input type="radio" class="text" name="geschlecht" value="Weiblich" /><label>Weiblich</label>
+                        <input type="radio" class="text" name="geschlecht" id="female" value="Weiblich" /><label>Weiblich</label>
                         <span class="checkmark"></span>
                     </label>
                 </p>
             </div>
             <div class="row-two">
                 <p>
-                    <input type="text" class="text-input"> Größe (cm)
-                    <input type="text" class="text-input"> Gewicht (kg)
+                    <input type="text" class="text-input" id="height"> Größe (cm)
+                    <input type="text" class="text-input" id="weight"> Gewicht (kg)
                 </p>
             </div>
         </div>
-        <form action="result.html">
+        <!-- <form action="result.html"> -->
+        <form>
             <input type="submit" id="submit" value="Start"/>
         </form>
+        
     </main>
     <footer>
         <h4>Weitere Informationen</h4>

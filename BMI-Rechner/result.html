@@ -8,24 +8,27 @@
     <meta name="Jan Huss" content="BMI-Rechner">
     <title>BMI Resultat</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+    <script src="scrips/script.js" defer></script>
 </head>
 <body>
     <header><h3>Resultat Deines <b>BMI</b></h3></header>
     <main>
-        <div id="result-box">
-            <p class="result-heading">Dein BMI</p>
+        <div class="output">
+            <p id = bmi></p>
+            <p id = weightClass></p>
         </div>
-        <div class="BMI-tabel">
-            <table id="result-tabel">
+        
+        <div class="bmiTabel">
+            <table id="maleTabel">
                 <thead>
-                    <tr id="tabel-head">
-                        <td id="top-left"><b>BMI</b></td>
-                        <td id="top-right"><b>Gewichtsstatus</b> </td>  
+                    <tr class="tabel-head">
+                        <td class="top-left"><b>BMI</b></td>
+                        <td class="top-right"><b>Gewichtsstatus</b> </td>  
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>unter 18,5</td>
+                        <td>unter <span id>18,5</span></td>
                         <td>Untergewicht</td>
                     </tr>
                     <tr>
@@ -45,11 +48,52 @@
                         <td>Adipositas Grad 2</td>
                     </tr>
                     <tr>
-                        <td id="bottom-left">über 40</td>
-                        <td id="bottom-right">Adipositas Grad 3</td>
+                        <td class="bottom-left">über 40</td>
+                        <td class="bottom-right">Adipositas Grad 3</td>
                     </tr>
                 </tbody>
             </table>
+            <table id="femaleTabel">
+                <thead>
+                    <tr class="tabel-head">
+                        <td class="top-left"><b>BMI</b></td>
+                        <td class="top-right"><b>Gewichtsstatus</b> </td>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>unter 17,5</td>
+                        <td>Untergewicht</td>
+                    </tr>
+                    <tr>
+                        <td>17,5 bis 24</td>
+                        <td>Normalgewicht</td>
+                    </tr>
+                    <tr>
+                        <td>25 bis 29,9</td>
+                        <td>Übergewicht</td>
+                    </tr>
+                    <tr>
+                        <td>30 bis 34,9</td>
+                        <td>Adipositas Grad 1</td>
+                    </tr>
+                    <tr>
+                        <td>35 bis 39,9</td>
+                        <td>Adipositas Grad 2</td>
+                    </tr>
+                    <tr>
+                        <td class="bottom-left">über 40</td>
+                        <td class="bottom-right">Adipositas Grad 3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bmi-pics">
+                <img src="assets/underweight.png" alt="Untergewicht">
+                <img src="assets/normal.png" alt="Normales Gewicht">
+                <img src="assets/overweight.png" alt="Übergewicht">
+                <img src="assets/obese1.png" alt="Adipositas Grad 1">
+                <img src="assets/obese2.png" alt="Adipositas Grad 2">
+            </div>
         </div>
         <form action="index.html">
             <input type="submit" id="submit" value="Neu"/>
