@@ -23,12 +23,14 @@
         </div>
     </header>
     <main>
-        <div class="output">
-            <p id = bmi></p>
-            <p id = weightClass></p>
-        </div>
         <div class="input-box">
-            <div class="row-one">
+            <div class="row">
+                <p>
+                    <input type="text" class="text-input" id="prename"/> Vorname
+                    <input type="text" class="text-input" id="surname"/> Nachname
+                </p>
+            </div>
+            <div class="row">
                 <p>
                     <input type="text" class="text-input" id="age"/> Alter
                     <label class= "container">
@@ -42,7 +44,7 @@
                     </label>
                 </p>
             </div>
-            <div class="row-two">
+            <div class="row">
                 <p>
                     <input type="text" class="text-input" id="height"> Größe (cm)
                     <input type="text" class="text-input" id="weight"> Gewicht (kg)
@@ -50,7 +52,7 @@
             </div>
         </div>
         <!-- <form action="result.html"> -->
-        <form>
+        <form action = "result.html">
             <input type="submit" id="submit" value="Start"/>
         </form>
         

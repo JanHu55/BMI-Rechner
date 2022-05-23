@@ -8,7 +8,7 @@
     <meta name="Jan Huss" content="BMI-Rechner">
     <title>BMI Resultat</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-    <script src="scrips/script.js" defer></script>
+    <script src="scrips/script2.js" defer></script>
 </head>
 <body>
     <header><h3>Resultat Deines <b>BMI</b></h3></header>
@@ -94,6 +94,22 @@
                 <img src="assets/obese1.png" alt="Adipositas Grad 1">
                 <img src="assets/obese2.png" alt="Adipositas Grad 2">
             </div>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr class="tabel-head">
+                        <td class="top-left"><b>Vorname</b></td>
+                        <td><b>Nachname</b></td>
+                        <td><b>Datum</b></td>
+                        <td><b>BMI</b></td>
+                        <td><b>Gewichtsstatus</b></td>
+                        <td class="top-right"><b>Gewichtsstatus</b> </td>  
+                    </tr>
+                </thead>
+                <tbody id="list">
+                </tbody>
+            </table>
         </div>
         <form action="index.html">
             <input type="submit" id="submit" value="Neu"/>
