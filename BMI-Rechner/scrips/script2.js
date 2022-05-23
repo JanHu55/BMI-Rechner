@@ -1,12 +1,11 @@
 let weightClass = document.getElementById("weightClass");
-const prename = document.getElementById("prename");
-const surname = document.getElementById("surname");
-let male = document.getElementById("male");
-let female = document.getElementById("female");
-const tableBody = document.getElementById("list")
 const femaleTabel = document.getElementById("femaleTabel");
 const maleTabel = document.getElementById("maleTabel");
+const tableBody = document.getElementById("list");
 const bmi = localStorage.getItem("bmi");
+const prename = localStorage.getItem("prename");
+const surname = localStorage.getItem("surname");
+const gender = localStorage.getItem("gender");
 let result = "default";
 
 classifieWeight();
@@ -27,7 +26,7 @@ function classifieWeight() {
          weightClass.textContent = result;
 }
 function checkGender(){
-    if (male.checked){
+    if (gender = true){
         femaleTabel.classList.add("hide");
         maleTabel.classList.remove("hide");
        console.log("male");
@@ -39,5 +38,5 @@ function checkGender(){
 }
 function createCell(){
     const tablecell = document.createElement("td");
-    
+
 }
