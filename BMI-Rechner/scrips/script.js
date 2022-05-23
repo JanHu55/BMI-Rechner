@@ -7,7 +7,6 @@ const surname = document.getElementById("surname");
 localStorage.setItem("surname", surname);
 let male = document.getElementById("male");
 const submit = document.getElementById("submit");
-let bmi = document.getElementById("bmi");
 let bmiResult = 0;
 let gender = "unset";
 
@@ -23,7 +22,6 @@ submit.addEventListener("click", (event) => {
 function calculateBmi() {
     bmiResult = (inputWeight.value / Math.pow(inputHeight.value, 2)) * 10000;
     bmiResult = bmiResult.toFixed(2);
-    bmi.textContent = bmiResult;
     localStorage.setItem("bmi", bmiResult);
 }
 function checkGender(){

@@ -3,6 +3,7 @@ const femaleTabel = document.getElementById("femaleTabel");
 const maleTabel = document.getElementById("maleTabel");
 const tableBody = document.getElementById("list");
 const bmi = localStorage.getItem("bmi");
+bmi.textContent = bmi;
 const prename = localStorage.getItem("prename");
 const surname = localStorage.getItem("surname");
 const gender = localStorage.getItem("gender");
