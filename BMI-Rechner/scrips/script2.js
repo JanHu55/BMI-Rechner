@@ -27,7 +27,7 @@ function classifieWeight() {
          weightClass.textContent = result;
 }
 function checkGender(){
-    if (gender = true){
+    if (gender == true){
         femaleTabel.classList.add("hide");
         maleTabel.classList.remove("hide");
        console.log("male");

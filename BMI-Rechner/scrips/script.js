@@ -16,7 +16,11 @@ submit.addEventListener("click", (event) => {
     console.log(inputWeight.value);
     calculateBmi();
     checkGender();
-    window.location.href = "result.html";
+    sendJSONStringWithPOST(
+        'http://127.0.0.1:3000/bmi',
+        JSON.stringify({ bmi: bmiResult})
+      );
+    //window.location.href = "result.html";
 });
 
 function calculateBmi() {
@@ -32,7 +36,15 @@ function checkGender(){
    }
    localStorage.setItem("gender", gender);
 }
-/* console.log(input); debug */
+async function sendJSONStringWithPOST(url, jsonString) {
+    const response = await fetch(url, {
+      method: 'post',
+      body: jsonString
+    });
+    const text = await response.text();
+    console.log(text);
+  }
+
 /* let checkValue = () => {
     firstInpur.checkValue;
 } */
