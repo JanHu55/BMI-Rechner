@@ -2,39 +2,47 @@ let inputAge = document.getElementById("age");
 let inputHeight = document.getElementById("height");
 let inputWeight = document.getElementById("weight");
 const prename = document.getElementById("prename");
-localStorage.setItem("prename", prename);
 const surname = document.getElementById("surname");
-localStorage.setItem("surname", surname);
 let male = document.getElementById("male");
 const submit = document.getElementById("submit");
 let bmiResult = 0;
 let gender = "unset";
 
-submit.addEventListener("click", (event) => {
+submit.addEventListener("click", async (event) => {
     event.preventDefault();
     console.log(inputHeight.value);
     console.log(inputWeight.value);
+    console.log("test");
     calculateBmi();
     checkGender();
-    sendJSONStringWithPOST(
+
+    const bmi = {
+      fistName: prename.value,
+      lastName: surname.value,
+      age: age.value,
+      gender: gender.value,
+      bmi: bmiResult,
+      date: new Date
+    };
+    console.log(JSON.stringify(bmi));
+    await sendJSONStringWithPOST(
         'http://127.0.0.1:3000/bmi',
-        JSON.stringify({ bmi: bmiResult})
+        JSON.stringify(bmi)
       );
-    //window.location.href = "result.html";
+    window.location.href = "result.html";
 });
 
 function calculateBmi() {
     bmiResult = (inputWeight.value / Math.pow(inputHeight.value, 2)) * 10000;
     bmiResult = bmiResult.toFixed(2);
-    localStorage.setItem("bmi", bmiResult);
+    //localStorage.setItem("bmi", bmiResult);
 }
 function checkGender(){
     if (male.checked){
-        gender = true;
+        gender = male;
    }else{
-       gender = false;
+       gender = female;
    }
-   localStorage.setItem("gender", gender);
 }
 async function sendJSONStringWithPOST(url, jsonString) {
     const response = await fetch(url, {
