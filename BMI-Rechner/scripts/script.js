@@ -32,10 +32,10 @@ submit.addEventListener("click", async (event) => {
     window.location.href = "result.html";
 });
 
+
 function calculateBmi() {
     bmiResult = (inputWeight.value / Math.pow(inputHeight.value, 2)) * 10000;
     bmiResult = bmiResult.toFixed(2);
-    //localStorage.setItem("bmi", bmiResult);
 }
 function checkGender(){
     if (male.checked){

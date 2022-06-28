@@ -2,7 +2,6 @@ let weightClass = document.getElementById("weightClass");
 const femaleTabel = document.getElementById("femaleTabel");
 const maleTabel = document.getElementById("maleTabel");
 const tableBody = document.getElementById("list");
-bmi.textContent = bmi;
 let result = "default";
 
 getFromServer('http://127.0.0.1:3000/bmi');
@@ -21,7 +20,6 @@ function classifieWeight(bmi) {
         result = "Adipositas II";
          }
          weightClass.textContent = result;
-         return result;
 }
 function checkGender(gender){
     if (gender == "Männlich"){
@@ -48,7 +46,7 @@ async function updateView() {
     if (!currentTableEntries) {
         return;
     }
-    bmi.textContent = currentTableEntries[0].bmi;
+    bmi.textContent = "BMI: " + currentTableEntries[0].bmi;
     classifieWeight(currentTableEntries[0].bmi);
     checkGender(currentTableEntries[0].gender);
 
@@ -68,7 +66,6 @@ function createNewEventEntry(object) {
     let age= object.age;
     let gender= object.gender;
     let bmi= object.bmi;
-    let gewichtsstatus= result;
     
     // Auslesen der Input-Werte
     
@@ -80,7 +77,6 @@ function createNewEventEntry(object) {
         createTableCell(age, "data-age"),
         createTableCell(gender, "data-gender"),
         createTableCell(bmi, "data-bmi"),
-        createTableCell(gewichtsstatus)
     ];
 
     // füge die einzelnen Tabellenzellen der Tabellenreihe hinzu

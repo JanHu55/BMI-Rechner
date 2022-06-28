@@ -175,10 +175,10 @@ body {
  } 
  .input-box {
   background-color: #fff;  
-  height: 240px;  
+  height: 225px;  
   width: 450px;  
   border-radius: 20px;  
-  margin: 20px auto 20px auto;  
+  margin: 20px auto 30px auto;  
   display: block;  
   border: solid 1px #289df6;  
   box-shadow: 0 0 40px 0 #ddd;  
@@ -212,11 +212,11 @@ body {
  }  
  #submit {  
   border: none;  
-  border-radius: 10px;  
+  border-radius: 20px;  
   height: 40px;  
   width: 140px;  
   background-color: #289df6;  
-  color: #fff;  
+  color: #fff; 
   margin: auto;  
   display: block;  
   outline: none;  
@@ -227,10 +227,10 @@ body {
  } 
  .text {  
   display: inline-block;  
-  margin: 5px 20px 5px 8px;;  
+  margin: 2px 20px 2px 8px;;  
  }  
  .row {  
-  padding: 5px 20px 5px 20px;  
+  padding: 2px 20px 2px 20px;  
  }  
  .container {  
   display: inline-block;  
@@ -359,15 +359,14 @@ footer a {
   margin: 20px auto 20px auto;  
 }
 #bmi {
-  color:#fff;
-  outline: #289df6;
-  font-size: 24px;
-  padding: 15px;
+  color: black;
+  font-size: 36px;
+  padding-top: 10px;
 }
 #weightClass {
   color: #289df6;
   font-size: 24px;
-  padding: 15px;
+  padding: 10px;
 }
 .hide {
   display: none;
